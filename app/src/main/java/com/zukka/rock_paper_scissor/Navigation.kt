@@ -1,9 +1,4 @@
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,7 +6,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.zukka.rock_paper_scissor.screens.MainScreen
 import com.zukka.rock_paper_scissor.Screen
-import com.zukka.rock_paper_scissor.screens.GameScreen
+import com.zukka.rock_paper_scissor.screens.HomeGameScreen
 
 @Composable
 fun Navigation() {
@@ -27,7 +22,7 @@ fun Navigation() {
                 defaultValue = 1
             })
         ) { entry ->
-            entry.arguments?.let { GameScreen(numberOfPlayers = it.getInt("numberOfPlayers")) }
+            entry.arguments?.let { HomeGameScreen(numberOfPlayers = it.getInt("numberOfPlayers")) }
         }
     }
 }
